@@ -16,6 +16,10 @@ foreach ($link_repository as $value) {
 	echo '---- <br><br>';
 	if(!empty($temp_repo)){
 	$link_repository=array_merge($link_repository,$temp_repo );
+	$link_repo_size=count($link_repository);
+	print 'size:'.$link_repo_size;
+	if($link_repo_size>NO_OF_LINKS)  //process stoped after a given number of links are fetched.
+		break;
 	}
 }
 
